@@ -13,7 +13,7 @@ public class BDI {
         ScoreCalculator scoreCalculator = new ScoreCalculator();
         Scanner scanner = new Scanner(System.in);
 
-        questions.saveQuestions();
+        questions.importQuestions();
 
         for (int i = FIRST_QUESTION_KEY; i <= questions.getQMap().size(); i++) {
 

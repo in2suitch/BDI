@@ -8,7 +8,7 @@ public class Questions {
         return qMap;
     }
 
-    public void saveQuestions() {
+    public void importQuestions() {
 
         Answer[] q1 = {
                 new Answer("1 - I do not feel sad."),
