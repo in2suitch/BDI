@@ -1,8 +1,8 @@
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Questions {
-    private final Map<Integer, Answer[]> qMap = new LinkedHashMap<>();
+    private final Map<Integer, Answer[]> qMap = new HashMap<>();
 
     public Map<Integer, Answer[]> getQMap() {
         return qMap;
