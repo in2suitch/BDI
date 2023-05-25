@@ -15,12 +15,12 @@ public class BDI {
 
         questions.importQuestions();
 
-        for (int i = FIRST_QUESTION_KEY; i <= questions.getQMap().size(); i++) {
+        for (int i = FIRST_QUESTION_KEY; i <= questions.getQNumToAnswer().size(); i++) {
 
             System.out.print("\n");
-            System.out.println(i + "/" + questions.getQMap().size());
+            System.out.println(i + "/" + questions.getQNumToAnswer().size());
 
-            for (Answer answer : questions.getQMap().get(i)) {
+            for (Answer answer : questions.getQNumToAnswer().get(i)) {
                 System.out.println(answer.getAnswerBody());
             }
 
