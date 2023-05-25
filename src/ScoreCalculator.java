@@ -12,8 +12,8 @@ public class ScoreCalculator {
     public void printResults() {
         System.out.print("\n");
         System.out.println("Total Score: " + score + ".");
-        System.out.print("Interpretation: ");
 
+        System.out.print("Interpretation: ");
         if (score <= 10) {
             System.out.println("these ups and downs are considered normal.");
         } else if (score <= 16) {

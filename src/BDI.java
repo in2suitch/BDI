@@ -8,6 +8,7 @@ public class BDI {
     public static final int ANSWER_GIVES_3 = 3;
 
     public static void main(String[] args) {
+
         Questions questions = new Questions();
         ScoreCalculator scoreCalculator = new ScoreCalculator();
         Scanner scanner = new Scanner(System.in);
@@ -38,7 +39,7 @@ public class BDI {
                     scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_3);
                     break;
                 default:
-                    System.out.println("Press 1 to 4 to choose your answer.");
+                    System.out.println("Press 1-4 to choose your answer.");
                     i--;
             }
             i++;
