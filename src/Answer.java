@@ -1,9 +1,11 @@
 public class Answer {
-    private final int score;
     private final String answerBody;
 
-    public Answer(int score, String answerBody) {
-        this.score = score;
+    public Answer(String answerBody) {
         this.answerBody = answerBody;
+    }
+
+    public String getAnswerBody() {
+        return answerBody;
     }
 }
