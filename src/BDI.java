@@ -15,8 +15,7 @@ public class BDI {
 
         questions.saveQuestions();
 
-        int i = FIRST_QUESTION_KEY;
-        while (i <= questions.getQMap().size()) {
+        for (int i = FIRST_QUESTION_KEY; i <= questions.getQMap().size(); i++) {
 
             System.out.print("\n");
             System.out.println(i + "/" + questions.getQMap().size());
@@ -42,9 +41,7 @@ public class BDI {
                     System.out.println("Press 1-4 to choose your answer.");
                     i--;
             }
-            i++;
         }
-
         scoreCalculator.printResults();
     }
 }
