@@ -1,34 +1,49 @@
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.Scanner;
 
 public class BDI {
-    private static final Map<Integer, Answer[]> questionMap = new LinkedHashMap<>();
+
+    public static final int FIRST_QUESTION_KEY = 1;
+    public static final int ANSWER_GIVES_1 = 1;
+    public static final int ANSWER_GIVES_2 = 2;
+    public static final int ANSWER_GIVES_3 = 3;
 
     public static void main(String[] args) {
+        Questions questions = new Questions();
+        ScoreCalculator scoreCalculator = new ScoreCalculator();
+        Scanner scanner = new Scanner(System.in);
 
-    }
+        questions.saveQuestions();
 
-    private static void saveQuestions() {
+        int i = FIRST_QUESTION_KEY;
+        while (i <= questions.getQMap().size()) {
 
-        Answer[] q1 = {
-                new Answer(0, "1 - I do not feel sad."),
-                new Answer(1, "2 - I feel sad"),
-                new Answer(2, "3 - I am sad all the time and I can't snap out of it."),
-                new Answer(3, "4 - I am so sad and unhappy that I can't stand it.") };
-        questionMap.put(1, q1);
+            System.out.print("\n");
+            System.out.println(i + "/" + questions.getQMap().size());
 
-        Answer[] q2 = {
-                new Answer(0, "1 - I am not particularly discouraged about the future."),
-                new Answer(1, "2 - I feel discouraged about the future."),
-                new Answer(2, "3 - I feel I have nothing to look forward to."),
-                new Answer(3, "4 - I feel the future is hopeless and that things cannot improve.") };
-        questionMap.put(2, q2);
+            for (Answer answer : questions.getQMap().get(i)) {
+                System.out.println(answer.getAnswerBody());
+            }
 
-        Answer[] q3 = {
-                new Answer(0, "1 - I do not feel like a failure."),
-                new Answer(1, "2 - I feel I have failed more than the average person."),
-                new Answer(2, "3 - As I look back on my life, all I can see is a lot of failures."),
-                new Answer(3, "4 - I feel I am a complete failure as a person.") };
-        questionMap.put(3, q3);
+            int command = scanner.nextInt();
+            switch (command) {
+                case 1:
+                    break;
+                case 2:
+                    scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_1);
+                    break;
+                case 3:
+                    scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_2);
+                    break;
+                case 4:
+                    scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_3);
+                    break;
+                default:
+                    System.out.println("Press 1 to 4 to choose your answer.");
+                    i--;
+            }
+            i++;
+        }
+
+        scoreCalculator.printResults();
     }
 }
