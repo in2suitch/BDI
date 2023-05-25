@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class BDI {
 
     public static final int FIRST_QUESTION_KEY = 1;
-    public static final int ANSWER_GIVES_1 = 1;
-    public static final int ANSWER_GIVES_2 = 2;
-    public static final int ANSWER_GIVES_3 = 3;
+    public static final int ONE_POINT = 1;
+    public static final int TWO_POINTS = 2;
+    public static final int THREE_POINTS = 3;
 
     public static void main(String[] args) {
 
@@ -29,13 +29,13 @@ public class BDI {
                 case 1:
                     break;
                 case 2:
-                    scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_1);
+                    scoreCalculator.setScore(scoreCalculator.getScore() + ONE_POINT);
                     break;
                 case 3:
-                    scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_2);
+                    scoreCalculator.setScore(scoreCalculator.getScore() + TWO_POINTS);
                     break;
                 case 4:
-                    scoreCalculator.setScore(scoreCalculator.getScore() + ANSWER_GIVES_3);
+                    scoreCalculator.setScore(scoreCalculator.getScore() + THREE_POINTS);
                     break;
                 default:
                     System.out.println("Press 1-4 to choose your answer.");
