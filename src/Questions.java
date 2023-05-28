@@ -120,9 +120,9 @@ public class Questions {
 
         qNumToAnswer.put(19, new Answer[] {
                 new Answer("1 - I haven't lost much weight, if any, lately."),
-                new Answer("2 - I have lost more than 2 kg."),
-                new Answer("3 - I have lost more than 5 kg."),
-                new Answer("4 - I have lost more than 7 kg.") });
+                new Answer("2 - I have lost more than 2 kg (5 pounds)."),
+                new Answer("3 - I have lost more than 5 kg (10 pounds)."),
+                new Answer("4 - I have lost more than 7 kg (15 pounds).") });
 
         qNumToAnswer.put(20, new Answer[] {
                 new Answer("1 - I am no more worried about my health than usual."),
